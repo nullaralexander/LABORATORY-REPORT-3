@@ -1,4 +1,4 @@
-# EXPERIMENT 11: Sampling and Reconstruction
+# EXPERIMENT 12: PCM Encoding
 
 ---
 
