@@ -132,7 +132,7 @@ However, this restoration method has specific limitations, as extreme bandwidth 
 
 <img width="566" height="227" alt="Picture12" src="https://github.com/user-attachments/assets/023e3b1e-7903-403a-a8c6-adbe9bf56ae4" />
 
-# OBSERVATION
+## OBSERVATION
 
 ![7 1](https://github.com/user-attachments/assets/7734c811-b22a-48e9-8e8e-49ad715eca21) ![7 2](https://github.com/user-attachments/assets/d86db190-1c7a-4960-bc72-aaaa7b4630d7) ![7 3](https://github.com/user-attachments/assets/a30895ef-1e2c-4037-96d5-f2314524f17f)
 
@@ -144,7 +144,7 @@ To continue the signal restoration procedure, return the Variable DCV module's c
 
 <img width="517" height="399" alt="Picture13" src="https://github.com/user-attachments/assets/85745e40-574d-4342-a433-d9985b18fa29" />
 
-# OBSERVATION
+## OBSERVATION
 
 ![8 1](https://github.com/user-attachments/assets/60e49f74-3528-478b-abbf-1183e9483b44)![8 2](https://github.com/user-attachments/assets/042506df-6ab0-43d7-ac85-f2088c9f3050)
 
