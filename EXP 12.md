@@ -30,7 +30,7 @@ In this experiment, you will use the Emona Telecoms-Trainer 101 to:
 
 # IV. EXPERIMENTAL RESULTS
 
-## 1. PART A – Introduction to PCM Encoding using a Static DC Voltage
+# 1. PART A – Introduction to PCM Encoding using a Static DC Voltage
 
 ## 1.1 Experiment Circuit Procedure
 The PCM Encoder was clocked by an 8kHz digital output from the Master Signals module while the analog input was held at 0V DC. By viewing the Frame Synchronisation (FS) signal on the oscilloscope, we were able to identify the precise start and end of the digital data frames.
@@ -57,7 +57,7 @@ Channel 2 should now display 10 bits of the PCM Encoder module's data output. Th
 
 During the observation of the PCM output for Part 1.2, it was noted that the oscilloscope successfully displayed 10 bits of data: a complete 8-bit frame followed by the first two bits of the subsequent frame. This confirmed that the encoder operates on a continuous cycle, partitioning the analog input into discrete digital "words" at every clock pulse. We observed that the data is transmitted in a serial format where bit-7 (the Most Significant Bit) leads the frame, followed by bits 6 through 0. The stability of the 10-bit pattern while the input remained at 0V verified that the 8kHz clock and the encoder are perfectly synchronized, ensuring that each sample is accurately captured and framed without data drift.  
 
-## 2. PART B – PCM Encoding of a Variable DC Voltage
+# 2. PART B – PCM Encoding of a Variable DC Voltage
 
 ## 2.1 Speech Sampling Procedure
 
@@ -74,7 +74,7 @@ The Variable DCV module is used to let you change the Dc voltoge on the PcM Enco
 
 As we adjusted the variable DC control, we observed how the encoder dynamically generated different 8-bit binary output codes in response to the changing analog input levels. Moving the DC voltage above and below the reference line caused the serial bit pattern to shift, demonstrating the real-time quantization process. Final measurements confirmed the accuracy of the system, as the input voltage was recorded to be very close to 0V when the encoder produced the specific binary code previously identified during the static 0V test.  
 
-## 3. PART D- PCM Encoding  of Continously changing voltages
+# 3. PART D- PCM Encoding  of Continously changing voltages
 
 ## 3.1 Experiment Circuit Procedure
 We will be using the PCM Encoder module to convert continuously changing signals, specifically a sinewave, into a digital bitstream. Our goal is to observe how the encoder handles dynamic analog data by using a high-frequency 50kHz clock from the VCO module, allowing us to visualize the rapid transition of binary codes as the input signal fluctuates over time.  
