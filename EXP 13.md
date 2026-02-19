@@ -67,9 +67,7 @@ This continuous variation occurs because the sine wave's voltage is always chang
 # 2. PART B – Decoding the PCM data
 To begin the decoding phase, return the oscilloscope's Slope control to the "+" position and set the Mode control to CH1. It is important to observe that the decoder operates using "stolen" clock and frame synchronization signals directly from the encoder to ensure proper alignment. Next, adjust the Timebase control to stabilize the display for approximately two cycles of the message signal. Finally, switch the scope's Mode to DUAL to simultaneously view the original message signal and the reconstructed output from the PCM Decoder module.
 
-## 2.1 Speech Sampling Procedure
-
-#### Experiment Circuit Procedure
+## 2.1 Experiment Circuit Procedure
 
 <img width="632" height="261" alt="e13 2 1 1" src="https://github.com/user-attachments/assets/44d63c6b-3ef4-420d-938f-0eca34026f75" />
 
