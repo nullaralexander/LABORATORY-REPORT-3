@@ -42,7 +42,7 @@ In this experiment, you will use the Emona Telecoms-Trainer 101 to:
 
 # IV. EXPERIMENTAL RESULTS
 
-## 1. PART A – Sampling a Simple Message
+# 1. PART A – Sampling a Simple Message
 For this stage of our experiment, we utilized the **Dual Analog Switch module** on the Emona Telecoms-Trainer 101. The objective was to sample a simple message signal using two distinct techniques: **Natural Sampling** and **Sample-and-Hold**.
 
 ## 1.1 Natural Sampling Technique
@@ -76,7 +76,7 @@ The electronically controlled switch in the original setup was substituted for a
 In this stage of our experiment, we swapped the basic switch for a sample-and-hold circuit. While our signals stayed the same—a 2kHz sinewave message and an 8kHz sampling pulse—the output changed significantly.
 Instead of following the smooth curve of the sinewave, the yellow sampled signal now looks like a staircase. This happens because the circuit grabs the message’s voltage at the start of each pulse and "freezes" it, creating flat-topped pulses instead of curved ones. This process is known as Pulse Amplitude Modulation (PAM), and it is essential for digital systems that need a steady, unchanging voltage to process data accurately.
 
-## 2. PART B – Sampling Speech
+# 2. PART B – Sampling Speech
 While previous stages focused on a 2kHz sinewave, commercial digital communications systems primarily handle complex data like speech and music. This part of the experiment demonstrates the behavior of a sampled speech signal.
 
 ## 2.1 Speech Sampling Procedure
@@ -95,7 +95,7 @@ The 2kHz Sine wave was replaced by the **Speech module** output of the Emona Tel
 In this phase of our experiment, we transitioned from a simple 2kHz sinewave to a complex, real-world signal by connecting the Speech module output. While the sampling parameters remained constant, the oscilloscope now displays highly dynamic red traces that represent the irregular and varying frequencies of human speech or humming. As we observe the yellow sampled signal, we can see it continues to track the voice input using the sample-and-hold method, creating a "staircase" of flat-topped pulses that shift in real-time to match the pitch and volume of our voice. This demonstrates that the same sampling principles used for basic waves are effective for capturing the intricate data required for commercial digital communication systems.
 
 
-## 3. PART C – Reconstructing a Sampled Message
+# 3. PART C – Reconstructing a Sampled Message
 A sampled message is a composite of many sinewaves. Crucially, for every sinewave in the original message, there is a corresponding sinewave in the sampled signal at that same frequency. 
 
 **Reconstruction** involves passing the sampled signal through a **Low-Pass Filter (LPF)**. This allows the original message frequencies to pass while rejecting the high-frequency sampling harmonics.
@@ -121,7 +121,7 @@ Fully Reconstructed Signal
 As we turn the control clockwise, we increase the cut-off frequency until the message signal is allowed to pass. In the second oscilloscope, the yellow trace has transformed into a smooth sinewave that closely matches the red original message.
 
 
-## 4. PART D – Aliasing
+# 4. PART D – Aliasing
 In this final section, we investigate **aliasing**, a critical form of distortion that occurs when the sampling frequency is too low to accurately capture the message. Successful reconstruction is only possible when the sampling rate is high enough to keep unwanted frequency components—the aliases—outside the range of the filter.
 
 ## 4.1 Experiment Circuit Procedure
