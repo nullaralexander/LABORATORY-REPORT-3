@@ -149,3 +149,50 @@ To continue the signal restoration procedure, return the Variable DCV module's c
 ![8 1](https://github.com/user-attachments/assets/60e49f74-3528-478b-abbf-1183e9483b44)![8 2](https://github.com/user-attachments/assets/042506df-6ab0-43d7-ac85-f2088c9f3050)
 
 When the Tuneable Low-pass Filter is used to narrow the channel's bandwidth, the once-sharp digital pulses from the Sequence Generator are transformed into rounded, continuous waveforms that lack distinct transitions. To fix this, the Comparator is introduced to "square up" the signal by comparing the distorted waveform against a reference level from the Variable DCV module. While this successfully restores the rectangular shape of the pulses and makes the digital data readable again, the oscilloscope reveals that the restored signal (yellow) is now horizontally delayed compared to the original (red). This phase shift is an inherent property of the filtering process that the comparator cannot eliminate. Furthermore, the observation shows that restoration is only possible if the distortion isn't so severe that the signal fails to cross the DC reference threshold; otherwise, the comparator will output incorrect logic levels or fail to produce a signal at all.
+
+---
+
+# V. Lab Assessment: Post-Experiment Questions
+
+**Question 1:Why does bandwidth limiting of the channel cause the PCM Decoder module to output incorrect voltages as well as the correct one?**
+
+Answer: Bandwidth limiting removes the high-frequency harmonics required to maintain sharp "edges" on the digital pulses. When these pulses become rounded and attenuated, the decoder can no longer reliably distinguish between logic high and logic low levels, leading it to misinterpret the 8-bit digital codes and generate incorrect analog voltages.
+
+**Question 2: If this were a communications system transmitting speech, what would these errors sound like when the message is reconstructed?**
+
+Answer: In a PCM system, these bit errors manifest as audible noise, typically heard as "clicks" or "crackling" sounds in the reconstructed speech. As the distortion increases and more bits are misinterpreted, the speech would eventually become completely unintelligible.
+
+**Question 3: What two things are happening to cause the digital signal to change shape?**
+
+Answer: The change in shape is caused by attenuation (a reduction in signal amplitude) and the loss of high-frequency harmonics. Because a square wave is composed of a fundamental frequency and many harmonics, removing the higher frequencies rounds off the sharp corners of the pulses.
+
+**Question 4:What other change to your communication system distorts the digital signal in the same way as increasing its bit-rate?**
+
+Answer: Decreasing the channel's bandwidth (by turning the low-pass filter's cut-off frequency down) distorts the signal in the exact same way as increasing the bit-rate. Both actions reduce the ratio of available bandwidth to the frequency of the data pulses.
+
+**Question 5: Although the restored digital signal is almost identical to the original digital signal, there is a difference. Can you see what it is?**
+
+Answer: The difference is a phase shift or time delay. When overlaying the signals, the restored yellow trace is shifted horizontally to the right compared to the original red trace.
+
+**Question 6: Can this difference be ignored? Why?**
+
+Answer: In many simple systems, this slight delay can be ignored because the logical sequence of the bits remains intact. however, in high-speed or synchronous systems, excessive phase shift can cause timing issues where the receiver samples the data at the wrong moment, leading to errors.
+
+**Question 7: Why do some DC voltages cause the comparator to output the wrong information?**
+
+Answer: If the DC reference voltage is set too high or too low, the distorted (rounded) signal may not cross the threshold at the correct times, or may not cross it at all. This results in the comparator "missing" bits or outputting pulses with the wrong width (duty cycle).
+
+**Question 8: Why does the comparator begin to output the wrong information when this control (bandwidth/frequency) is turned far enough?**
+
+Answer: When bandwidth is restricted or bit-rate is increased too much, the signal amplitude drops so low that it no longer crosses the comparator's DC reference threshold. At this point, the comparator can no longer "see" the transitions between 1s and 0s.
+
+**Question 9: How can the comparator restore the bandwidth limited digital signal when it is so distorted?**
+
+Answer: The comparator acts as a high-gain switching device that triggers a clean, full-swing output the moment the input signal crosses a specific DC threshold. By "clipping" the rounded signal at this transition point, it regenerates the sharp vertical edges of the original square wave.
+
+---
+
+# VI. Conclusion
+This experiment successfully demonstrated the critical relationship between channel bandwidth, transmission bit rate, and digital signal integrity. Initially, the PCM system accurately reconstructed analog voltages when the channel bandwidth was sufficient to pass necessary high-frequency harmonics. However, restricting the bandwidth through low-pass filtering removed these harmonics, causing rectangular pulses to become rounded and attenuated, eventually leading to severe corruption of the decoded output as logic levels became indistinguishable. This same distortion was observed when increasing the transmission bit rate, confirming that high-speed data requires a proportionally wider bandwidth to prevent intersymbol interference.
+The use of eye diagrams provided a vital diagnostic tool, visually illustrating signal quality through the "openness" of the eye. Wide-open eyes indicated clear logic states, while "closing" eyes signaled increased timing jitter and rounding that lead to bit errors. While the introduction of a comparator proved effective for "squaring up" distorted signals by triggering at a specific DC reference threshold, this restoration method could not eliminate the inherent phase shift introduced by the channel. Ultimately, the experiment highlights that while hardware solutions like comparators can recover pulse shapes, there are fundamental physical limits to data transmission: if distortion is extreme enough to prevent the signal from crossing the switching threshold, the digital information is permanently lost.
+
