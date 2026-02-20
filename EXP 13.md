@@ -2,7 +2,7 @@
 
 ---
 
-# I. INTRODUCTIOn
+# I. INTRODUCTION
 This experiment focuses on PCM decoding, the process of recovering an original message from a serial binary bitstream. To achieve this, the decoder must identify data frames, extract 8-bit binary numbers, and generate proportional voltages—ranging from -2V (00000000) to +2V (11111111). This creates a Pulse Amplitude Modulation (PAM) signal, which is then smoothed into an analog waveform using a low-pass filter.
 Successful decoding relies on strict synchronization. Because the Emona Telecoms-Trainer 101 is not self-clocking, we will use a "stolen-signal" approach, providing the decoder with the exact clock (CK) and frame synchronization (FS) signals used by the encoder. Using this setup, we will convert sine waves and speech into PCM data and back again, demonstrating the precision required to accurately reconstruct digital data into its original analog form.
 
