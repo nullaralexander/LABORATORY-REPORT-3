@@ -49,27 +49,27 @@ Software Defined Radio uses software to replace traditional hardware components,
 
  * Signal Reconstruction: Demonstrate how to successfully recover analog messages using Low-Pass Filtering and analyze the critical importance of Clock and Frame Synchronization.
 
- *Error & Distortion Analysis: Investigate physical limitations such as Aliasing (sampling too slowly), Quantization Error (rounding noise), and Bandwidth Limiting (channel distortion).
+ * Error & Distortion Analysis: Investigate physical limitations such as Aliasing (sampling too slowly), Quantization Error (rounding noise), and Bandwidth Limiting (channel distortion).
 
- *Signal Restoration: Implement hardware solutions like Comparators to "square up" and restore digital pulses that have been degraded by the transmission medium.
+ * Signal Restoration: Implement hardware solutions like Comparators to "square up" and restore digital pulses that have been degraded by the transmission medium.
 
 ### Part 2: Digital Modulation (Experiments 15 - 18)
- *Carrier Modulation Techniques: Implement and compare three primary methods of shifting digital data onto high-frequency waves: Amplitude (ASK), Frequency (FSK), and Phase (BPSK).
+ * Carrier Modulation Techniques: Implement and compare three primary methods of shifting digital data onto high-frequency waves: Amplitude (ASK), Frequency (FSK), and Phase (BPSK).
 
- *Demodulation Strategies: Build recovery circuits using various methods, including Envelope Detectors for ASK/FSK and Product Detectors (Multipliers) for phase-sensitive BPSK.
+ * Demodulation Strategies: Build recovery circuits using various methods, including Envelope Detectors for ASK/FSK and Product Detectors (Multipliers) for phase-sensitive BPSK.
 
- *Spectral Efficiency: Explore QPSK to understand how "bit-splitting" allows two independent data streams to occupy the same frequency space, doubling the capacity of the channel.
+ * Spectral Efficiency: Explore QPSK to understand how "bit-splitting" allows two independent data streams to occupy the same frequency space, doubling the capacity of the channel.
 
- *Performance Evaluation: Analyze the trade-offs between system complexity and Noise Immunity, identifying why phase modulation (BPSK/QPSK) is superior for minimizing transmission errors.
+ * Performance Evaluation: Analyze the trade-offs between system complexity and Noise Immunity, identifying why phase modulation (BPSK/QPSK) is superior for minimizing transmission errors.
 
 ### Part 3: Advanced Transmission & SDR (Experiments 19 - 20)
- *Spread Spectrum Security: Model DSSS by using Pseudo-Noise (PN) sequences to "hide" data within wideband noise, making transmissions resistant to jamming and unauthorized interception.
+ * Spread Spectrum Security: Model DSSS by using Pseudo-Noise (PN) sequences to "hide" data within wideband noise, making transmissions resistant to jamming and unauthorized interception.
 
- *Sequence Synchronization: Verify that successful DSSS recovery requires the receiver to match the transmitter’s code and phase exactly, highlighting the system's inherent encryption.
+ * Sequence Synchronization: Verify that successful DSSS recovery requires the receiver to match the transmitter’s code and phase exactly, highlighting the system's inherent encryption.
 
- *Software Defined Radio Principles: Challenge traditional Nyquist limits by implementing Undersampling (Band-pass sampling) to process high-frequency signals at much lower rates.
+ * Software Defined Radio Principles: Challenge traditional Nyquist limits by implementing Undersampling (Band-pass sampling) to process high-frequency signals at much lower rates.
 
- *Efficient Down-Conversion: Validate Shannon’s Information Theorem by showing that the sampling process itself can perform frequency down-conversion and demodulation in a single step.
+ * Efficient Down-Conversion: Validate Shannon’s Information Theorem by showing that the sampling process itself can perform frequency down-conversion and demodulation in a single step.
 
 ---
 
