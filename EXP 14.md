@@ -1,4 +1,4 @@
-# EXPERIMENT 12: PCM Encoding
+# EXPERIMENT 14: Bandwidth Limiting and Restoring Digital Signals
 
 ---
 
