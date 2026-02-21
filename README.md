@@ -87,27 +87,37 @@ Software Defined Radio uses software to replace traditional hardware components,
 # 📔 Overall Laboratory Discussion & Reflection
 
 ## Part 1: The Digital Bridge (Experiments 11 - 14)
-### Experiment 11 (Sampling and Reconstruction): This experiment validated the Nyquist-Shannon Theorem. We proved that analog signals can be converted into discrete pulses without loss of information, provided the sampling rate is sufficient. The use of a Low-Pass Filter (LPF) was essential to remove the high-frequency switching noise and reconstruct the smooth original wave.
+### Experiment 11 (Sampling and Reconstruction): 
+This experiment validated the Nyquist-Shannon Theorem. We proved that analog signals can be converted into discrete pulses without loss of information, provided the sampling rate is sufficient. The use of a Low-Pass Filter (LPF) was essential to remove the high-frequency switching noise and reconstruct the smooth original wave.
 
-### Experiment 12 (PCM Encoding): We explored the transformation of analog voltages into a structured 8-bit binary stream. A key observation was the "MSB-first" protocol and the necessity of Frame Synchronization (FS) to tell the receiver exactly where a new sample begins within the continuous bitstream.
+### Experiment 12 (PCM Encoding): 
+We explored the transformation of analog voltages into a structured 8-bit binary stream. A key observation was the "MSB-first" protocol and the necessity of Frame Synchronization (FS) to tell the receiver exactly where a new sample begins within the continuous bitstream.
 
-### Experiment 13 (PCM Decoding): This session demonstrated that the immediate result of decoding is a "staircase" Pulse Amplitude Modulation (PAM) signal. While this signal contains the correct data, it requires filtering to smooth out quantization noise and sharp transitions, highlighting that reconstruction is a two-step process: decoding plus filtering.
+### Experiment 13 (PCM Decoding): 
+This session demonstrated that the immediate result of decoding is a "staircase" Pulse Amplitude Modulation (PAM) signal. While this signal contains the correct data, it requires filtering to smooth out quantization noise and sharp transitions, highlighting that reconstruction is a two-step process: decoding plus filtering.
 
-### Experiment 14 (Bandwidth Limiting and Restoring): We modeled real-world channel limitations. By restricting bandwidth, we observed the "closing" of the Eye Diagram, which visually represents how intersymbol interference (ISI) makes it difficult to distinguish between 1s and 0s. We also proved that Comparators can restore pulse shapes but cannot fix the timing shifts introduced by the channel.
+### Experiment 14 (Bandwidth Limiting and Restoring): 
+We modeled real-world channel limitations. By restricting bandwidth, we observed the "closing" of the Eye Diagram, which visually represents how intersymbol interference (ISI) makes it difficult to distinguish between 1s and 0s. We also proved that Comparators can restore pulse shapes but cannot fix the timing shifts introduced by the channel.
 
 ## Part 2: Digital Modulation (Experiments 15 - 18)
-### Experiment 15 (Amplitude Shift Keying): We successfully modeled the simplest digital modulation (ON/OFF switching). We learned that while an Envelope Detector is a simple way to recover data, the process is highly dependent on carrier-to-bit-rate separation and requires a comparator to "square up" the resulting rounded signals.
+### Experiment 15 (Amplitude Shift Keying): 
+We successfully modeled the simplest digital modulation (ON/OFF switching). We learned that while an Envelope Detector is a simple way to recover data, the process is highly dependent on carrier-to-bit-rate separation and requires a comparator to "square up" the resulting rounded signals.
 
-### Experiment 16 (Frequency Shift Keying): By using a Voltage Controlled Oscillator (VCO) to switch between "Mark" and "Space" frequencies, we observed superior noise immunity. We also demonstrated a creative demodulation method: using a filter to turn frequency shifts back into amplitude shifts (ASK) for easier detection.
+### Experiment 16 (Frequency Shift Keying): 
+By using a Voltage Controlled Oscillator (VCO) to switch between "Mark" and "Space" frequencies, we observed superior noise immunity. We also demonstrated a creative demodulation method: using a filter to turn frequency shifts back into amplitude shifts (ASK) for easier detection.
 
-### Experiment 17 (Binary Phase Shift Keying): This experiment established BPSK as a highly robust modulation form. By flipping the carrier phase by 180°, we stored data in the phase transitions. While the recovery required complex Synchronous Demodulation (using multipliers), the resulting data integrity was far superior to ASK or FSK.
+### Experiment 17 (Binary Phase Shift Keying): 
+This experiment established BPSK as a highly robust modulation form. By flipping the carrier phase by 180°, we stored data in the phase transitions. While the recovery required complex Synchronous Demodulation (using multipliers), the resulting data integrity was far superior to ASK or FSK.
 
-### Experiment 18 (Quadrature Phase Shift Keying): We explored spectral efficiency. By splitting the data into even and odd bits and modulating them onto carriers 90° apart, we proved that two separate signals can occupy the same frequency space simultaneously. This effectively doubles the capacity of a communication channel.
+### Experiment 18 (Quadrature Phase Shift Keying): 
+We explored spectral efficiency. By splitting the data into even and odd bits and modulating them onto carriers 90° apart, we proved that two separate signals can occupy the same frequency space simultaneously. This effectively doubles the capacity of a communication channel.
 
 ## Part 3: Advanced Transmission & SDR (Experiments 19 - 20)
-### Experiment 19 (DSSS Modulation and Demodulation): We investigated Spread Spectrum technology. By multiplying the message with a high-speed Pseudo-Noise (PN) sequence, the signal becomes "hidden" in the noise floor. We demonstrated its incredible interference immunity, where even signals buried under 0dB of noise could be perfectly recovered through processing gain.
+### Experiment 19 (DSSS Modulation and Demodulation): 
+We investigated Spread Spectrum technology. By multiplying the message with a high-speed Pseudo-Noise (PN) sequence, the signal becomes "hidden" in the noise floor. We demonstrated its incredible interference immunity, where even signals buried under 0dB of noise could be perfectly recovered through processing gain.
 
-### Experiment 20 (Undersampling in SDR): This final experiment challenged the standard Nyquist rule. We proved that for bandwidth-limited signals, we can sample at a rate much lower than the carrier frequency (Undersampling). This allowed a Sample-and-Hold circuit to act as a direct down-converter, demonstrating the flexible, hardware-efficient architecture used in modern Software Defined Radios.
+### Experiment 20 (Undersampling in SDR): 
+This final experiment challenged the standard Nyquist rule. We proved that for bandwidth-limited signals, we can sample at a rate much lower than the carrier frequency (Undersampling). This allowed a Sample-and-Hold circuit to act as a direct down-converter, demonstrating the flexible, hardware-efficient architecture used in modern Software Defined Radios.
 
 
 ---
